@@ -1,0 +1,1119 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/stackgl/headless-gl#readme"
+
+    >gl (v4.0.3)</a>
+</h1>
+<h4>Creates a WebGL context without a window</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gl">module gl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.gl">
+            function <span class="apidocSignatureSpan"></span>gl
+            <span class="apidocSignatureSpan">(width, height, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap">
+            function <span class="apidocSignatureSpan">gl.</span>wrap
+            <span class="apidocSignatureSpan">(gl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gl.</span>webgl</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gl.webgl">module gl.webgl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLActiveInfo">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLActiveInfo
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLBuffer">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLBuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLContextAttributes">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLContextAttributes
+            <span class="apidocSignatureSpan">( alpha, depth, stencil, antialias, premultipliedAlpha, preserveDrawingBuffer, preferLowPowerToHighPerformance, failIfMajorPerformanceCaveat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLDrawingBufferWrapper">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLDrawingBufferWrapper
+            <span class="apidocSignatureSpan">( framebuffer, color, depthStencil)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLFramebuffer">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLFramebuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLProgram">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLProgram
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLRenderbuffer">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLRenderbuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLRenderingContext">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLRenderingContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLShader">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLShader
+            <span class="apidocSignatureSpan">(_, ctx, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLShaderPrecisionFormat">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLShaderPrecisionFormat
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLTexture">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLTexture
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLTextureUnit">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLTextureUnit
+            <span class="apidocSignatureSpan">(ctx, idx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLUniformLocation">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLUniformLocation
+            <span class="apidocSignatureSpan">(_, program, info)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.WebGLVertexAttribute">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLVertexAttribute
+            <span class="apidocSignatureSpan">(ctx, idx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.webgl.allocateDrawingBuffer">
+            function <span class="apidocSignatureSpan">gl.webgl.</span>allocateDrawingBuffer
+            <span class="apidocSignatureSpan">(context, width, height)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gl.wrap">module gl.wrap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.wrap">
+            function <span class="apidocSignatureSpan">gl.</span>wrap
+            <span class="apidocSignatureSpan">(gl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLActiveInfo">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLActiveInfo
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLBuffer">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLBuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLFramebuffer">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLFramebuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLProgram">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLProgram
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLRenderbuffer">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLRenderbuffer
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLRenderingContext">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLRenderingContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLShader">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLShader
+            <span class="apidocSignatureSpan">(_, ctx, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLShaderPrecisionFormat">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLShaderPrecisionFormat
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLTexture">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLTexture
+            <span class="apidocSignatureSpan">(_, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gl.wrap.WebGLUniformLocation">
+            function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLUniformLocation
+            <span class="apidocSignatureSpan">(_, program, info)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gl" id="apidoc.module.gl">module gl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gl.gl" id="apidoc.element.gl.gl">
+        function <span class="apidocSignatureSpan"></span>gl
+        <span class="apidocSignatureSpan">(width, height, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createContext(width, height, options) {
+  var i
+
+  width = width | 0
+  height = height | 0
+  if (!(width &#x3e; 0 &#x26;&#x26; height &#x3e; 0)) {
+    return null
+  }
+
+  var contextAttributes = new webgl.WebGLContextAttributes(
+    flag(options, &#x27;alpha&#x27;, true),
+    flag(options, &#x27;depth&#x27;, true),
+    flag(options, &#x27;stencil&#x27;, false),
+    false, // flag(options, &#x27;antialias&#x27;, true),
+    flag(options, &#x27;premultipliedAlpha&#x27;, true),
+    flag(options, &#x27;preserveDrawingBuffer&#x27;, false),
+    flag(options, &#x27;preferLowPowerToHighPerformance&#x27;, false),
+    flag(options, &#x27;failIfMajorPerformanceCaveat&#x27;, false))
+
+  // Can only use premultipliedAlpha if alpha is set
+  contextAttributes.premultipliedAlpha =
+    contextAttributes.premultipliedAlpha &#x26;&#x26; contextAttributes.alpha
+
+  var gl
+  try {
+    gl = new webgl.WebGLRenderingContext(
+      1,
+      1,
+      contextAttributes.alpha,
+      contextAttributes.depth,
+      contextAttributes.stencil,
+      contextAttributes.antialias,
+      contextAttributes.premultipliedAlpha,
+      contextAttributes.preserveDrawingBuffer,
+      contextAttributes.preferLowPowerToHighPerformance,
+      contextAttributes.failIfMajorPerformanceCaveat)
+  } catch (e) {}
+  if (!gl) {
+    return null
+  }
+
+  gl.drawingBufferWidth = width
+  gl.drawingBufferHeight = height
+
+  gl._ = CONTEXT_COUNTER++
+
+  gl._contextattributes = contextAttributes
+
+  gl._extensions = {}
+  gl._programs = {}
+  gl._shaders = {}
+  gl._buffers = {}
+  gl._textures = {}
+  gl._framebuffers = {}
+  gl._renderbuffers = {}
+
+  gl._activeProgram = null
+  gl._activeFramebuffer = null
+  gl._activeArrayBuffer = null
+  gl._activeElementArrayBuffer = null
+  gl._activeRenderbuffer = null
+
+  // Initialize texture units
+  var numTextures = gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS)
+  gl._textureUnits = new Array(numTextures)
+  for (i = 0; i &#x3c; numTextures; ++i) {
+    gl._textureUnits[i] = new webgl.WebGLTextureUnit(i)
+  }
+  gl._activeTextureUnit = 0
+  gl.activeTexture(gl.TEXTURE0)
+
+  gl._errorStack = []
+
+  // Initialize vertex attributes
+  var numAttribs = gl.getParameter(gl.MAX_VERTEX_ATTRIBS)
+  gl._vertexAttribs = new Array(numAttribs)
+  for (i = 0; i &#x3c; numAttribs; ++i) {
+    gl._vertexAttribs[i] = new webgl.WebGLVertexAttribute(gl, i)
+  }
+
+  // Store limits
+  gl._maxTextureSize = gl.getParameter(gl.MAX_TEXTURE_SIZE)
+  gl._maxTextureLevel = bits.log2(bits.nextPow2(gl._maxTextureSize))
+  gl._maxCubeMapSize = gl.getParameter(gl.MAX_CUBE_MAP_TEXTURE_SIZE)
+  gl._maxCubeMapLevel = bits.log2(bits.nextPow2(gl._maxCubeMapSize))
+
+  // Unpack alignment
+  gl._unpackAlignment = 4
+  gl._packAlignment = 4
+
+  // Allocate framebuffer
+  webgl.allocateDrawingBuffer(gl, width, height)
+
+  var attrib0Buffer = gl.createBuffer()
+  gl._attrib0Buffer = attrib0Buffer
+
+  // Initialize defaults
+  gl.bindBuffer(gl.ARRAY_BUFFER, null)
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, null)
+  gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+  gl.bindRenderbuffer(gl.RENDERBUFFER, null)
+
+  // Set viewport and scissor
+  gl.viewport(0, 0, width, height)
+  gl.scissor(0, 0, width, height)
+
+  // Clear buffers
+  gl.clearDepth(1)
+  gl.clearColor(0, 0, 0, 0)
+  gl.clearStencil(0)
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
+
+  return wrap(gl)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap" id="apidoc.element.gl.wrap">
+        function <span class="apidocSignatureSpan">gl.</span>wrap
+        <span class="apidocSignatureSpan">(gl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapContext(gl) {
+  var props = Object.keys(gl).concat(Object.keys(gl.constructor.prototype))
+  var wrapper = new WebGLRenderingContext()
+
+  props.forEach(function (prop) {
+    if (prop[0] === &#x27;_&#x27; ||
+        prop[0] === &#x27;0&#x27; ||
+        prop[0] === &#x27;1&#x27;) {
+      return
+    }
+    var value = gl[prop]
+    if (typeof value === &#x27;function&#x27;) {
+      if (privateMethods.indexOf(value) &#x3c; 0) {
+        wrapper[prop] = value.bind(gl)
+      }
+    } else {
+      wrapper[prop] = value
+    }
+  })
+
+  Object.defineProperties(wrapper, {
+    drawingBufferWidth: {
+      get: function () { return gl.drawingBufferWidth }
+    },
+    drawingBufferHeight: {
+      get: function () { return gl.drawingBufferHeight }
+    }
+  })
+
+  return wrapper
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gl.webgl" id="apidoc.module.gl.webgl">module gl.webgl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLActiveInfo" id="apidoc.element.gl.webgl.WebGLActiveInfo">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLActiveInfo
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLActiveInfo(_) {
+  this.size = _.size
+  this.type = _.type
+  this.name = _.name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLBuffer" id="apidoc.element.gl.webgl.WebGLBuffer">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLBuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLBuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._size = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._elements = new Uint8Array(0)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLContextAttributes" id="apidoc.element.gl.webgl.WebGLContextAttributes">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLContextAttributes
+        <span class="apidocSignatureSpan">( alpha, depth, stencil, antialias, premultipliedAlpha, preserveDrawingBuffer, preferLowPowerToHighPerformance, failIfMajorPerformanceCaveat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLContextAttributes( alpha, depth, stencil, antialias, premultipliedAlpha, preserveDrawingBuffer, preferLowPowerToHighPerformance, failIfMajorPerformanceCaveat) {
+  this.alpha = alpha
+  this.depth = depth
+  this.stencil = stencil
+  this.antialias = antialias
+  this.premultipliedAlpha = premultipliedAlpha
+  this.preserveDrawingBuffer = preserveDrawingBuffer
+  this.preferLowPowerToHighPerformance = preferLowPowerToHighPerformance
+  this.failIfMajorPerformanceCaveat = failIfMajorPerformanceCaveat
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLDrawingBufferWrapper" id="apidoc.element.gl.webgl.WebGLDrawingBufferWrapper">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLDrawingBufferWrapper
+        <span class="apidocSignatureSpan">( framebuffer, color, depthStencil)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLDrawingBufferWrapper( framebuffer, color, depthStencil) {
+  this._framebuffer = framebuffer
+  this._color = color
+  this._depthStencil = depthStencil
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLFramebuffer" id="apidoc.element.gl.webgl.WebGLFramebuffer">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLFramebuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLFramebuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+
+  this._width = 0
+  this._height = 0
+
+  this._attachments = {}
+  this._attachments[gl.COLOR_ATTACHMENT0] = null
+  this._attachments[gl.DEPTH_ATTACHMENT] = null
+  this._attachments[gl.STENCIL_ATTACHMENT] = null
+  this._attachments[gl.DEPTH_STENCIL_ATTACHMENT] = null
+
+  this._attachmentLevel = {}
+  this._attachmentLevel[gl.COLOR_ATTACHMENT0] = 0
+  this._attachmentLevel[gl.DEPTH_ATTACHMENT] = 0
+  this._attachmentLevel[gl.STENCIL_ATTACHMENT] = 0
+  this._attachmentLevel[gl.DEPTH_STENCIL_ATTACHMENT] = 0
+
+  this._attachmentFace = {}
+  this._attachmentFace[gl.COLOR_ATTACHMENT0] = 0
+  this._attachmentFace[gl.DEPTH_ATTACHMENT] = 0
+  this._attachmentFace[gl.STENCIL_ATTACHMENT] = 0
+  this._attachmentFace[gl.DEPTH_STENCIL_ATTACHMENT] = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLProgram" id="apidoc.element.gl.webgl.WebGLProgram">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLProgram
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLProgram(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._linkCount = 0
+  this._pendingDelete = false
+  this._linkStatus = false
+  this._linkInfoLog = &#x27;not linked&#x27;
+  this._references = []
+  this._refCount = 0
+  this._attributes = []
+  this._uniforms = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLRenderbuffer" id="apidoc.element.gl.webgl.WebGLRenderbuffer">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLRenderbuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLRenderbuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._width = 0
+  this._height = 0
+  this._format = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLRenderingContext" id="apidoc.element.gl.webgl.WebGLRenderingContext">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLRenderingContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLRenderingContext() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLShader" id="apidoc.element.gl.webgl.WebGLShader">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLShader
+        <span class="apidocSignatureSpan">(_, ctx, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLShader(_, ctx, type) {
+  this._ = _
+  this._type = type
+  this._ctx = ctx
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._source = &#x27;&#x27;
+  this._compileStatus = false
+  this._compileInfo = &#x27;&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLShaderPrecisionFormat" id="apidoc.element.gl.webgl.WebGLShaderPrecisionFormat">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLShaderPrecisionFormat
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLShaderPrecisionFormat(_) {
+  this.rangeMin = _.rangeMin
+  this.rangeMax = _.rangeMax
+  this.precision = _.precision
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLTexture" id="apidoc.element.gl.webgl.WebGLTexture">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLTexture
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLTexture(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._levelWidth = new Int32Array(32)
+  this._levelHeight = new Int32Array(32)
+  this._format = 0
+  this._type = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLTextureUnit" id="apidoc.element.gl.webgl.WebGLTextureUnit">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLTextureUnit
+        <span class="apidocSignatureSpan">(ctx, idx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLTextureUnit(ctx, idx) {
+  this._ctx = ctx
+  this._idx = idx
+  this._mode = 0
+  this._bind2D = null
+  this._bindCube = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLUniformLocation" id="apidoc.element.gl.webgl.WebGLUniformLocation">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLUniformLocation
+        <span class="apidocSignatureSpan">(_, program, info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLUniformLocation(_, program, info) {
+  this._ = _
+  this._program = program
+  this._linkCount = program._linkCount
+  this._activeInfo = info
+  this._array = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.WebGLVertexAttribute" id="apidoc.element.gl.webgl.WebGLVertexAttribute">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>WebGLVertexAttribute
+        <span class="apidocSignatureSpan">(ctx, idx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLVertexAttribute(ctx, idx) {
+  this._ctx = ctx
+  this._idx = idx
+  this._isPointer = false
+  this._pointerBuffer = null
+  this._pointerOffset = 0
+  this._pointerSize = 0
+  this._pointerStride = 0
+  this._pointerType = gl.FLOAT
+  this._pointerNormal = false
+  this._divisor = 0
+  this._inputSize = 4
+  this._inputStride = 0
+  this._data = new Float32Array([0, 0, 0, 1])
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.webgl.allocateDrawingBuffer" id="apidoc.element.gl.webgl.allocateDrawingBuffer">
+        function <span class="apidocSignatureSpan">gl.webgl.</span>allocateDrawingBuffer
+        <span class="apidocSignatureSpan">(context, width, height)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function allocateDrawingBuffer(context, width, height) {
+  context._drawingBuffer = new WebGLDrawingBufferWrapper(
+    _createFramebuffer.call(context),
+    _createTexture.call(context),
+    _createRenderbuffer.call(context))
+
+  resizeDrawingBuffer(context, width, height)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gl.wrap" id="apidoc.module.gl.wrap">module gl.wrap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.wrap" id="apidoc.element.gl.wrap.wrap">
+        function <span class="apidocSignatureSpan">gl.</span>wrap
+        <span class="apidocSignatureSpan">(gl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapContext(gl) {
+  var props = Object.keys(gl).concat(Object.keys(gl.constructor.prototype))
+  var wrapper = new WebGLRenderingContext()
+
+  props.forEach(function (prop) {
+    if (prop[0] === &#x27;_&#x27; ||
+        prop[0] === &#x27;0&#x27; ||
+        prop[0] === &#x27;1&#x27;) {
+      return
+    }
+    var value = gl[prop]
+    if (typeof value === &#x27;function&#x27;) {
+      if (privateMethods.indexOf(value) &#x3c; 0) {
+        wrapper[prop] = value.bind(gl)
+      }
+    } else {
+      wrapper[prop] = value
+    }
+  })
+
+  Object.defineProperties(wrapper, {
+    drawingBufferWidth: {
+      get: function () { return gl.drawingBufferWidth }
+    },
+    drawingBufferHeight: {
+      get: function () { return gl.drawingBufferHeight }
+    }
+  })
+
+  return wrapper
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLActiveInfo" id="apidoc.element.gl.wrap.WebGLActiveInfo">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLActiveInfo
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLActiveInfo(_) {
+  this.size = _.size
+  this.type = _.type
+  this.name = _.name
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLBuffer" id="apidoc.element.gl.wrap.WebGLBuffer">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLBuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLBuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._size = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._elements = new Uint8Array(0)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLFramebuffer" id="apidoc.element.gl.wrap.WebGLFramebuffer">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLFramebuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLFramebuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+
+  this._width = 0
+  this._height = 0
+
+  this._attachments = {}
+  this._attachments[gl.COLOR_ATTACHMENT0] = null
+  this._attachments[gl.DEPTH_ATTACHMENT] = null
+  this._attachments[gl.STENCIL_ATTACHMENT] = null
+  this._attachments[gl.DEPTH_STENCIL_ATTACHMENT] = null
+
+  this._attachmentLevel = {}
+  this._attachmentLevel[gl.COLOR_ATTACHMENT0] = 0
+  this._attachmentLevel[gl.DEPTH_ATTACHMENT] = 0
+  this._attachmentLevel[gl.STENCIL_ATTACHMENT] = 0
+  this._attachmentLevel[gl.DEPTH_STENCIL_ATTACHMENT] = 0
+
+  this._attachmentFace = {}
+  this._attachmentFace[gl.COLOR_ATTACHMENT0] = 0
+  this._attachmentFace[gl.DEPTH_ATTACHMENT] = 0
+  this._attachmentFace[gl.STENCIL_ATTACHMENT] = 0
+  this._attachmentFace[gl.DEPTH_STENCIL_ATTACHMENT] = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLProgram" id="apidoc.element.gl.wrap.WebGLProgram">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLProgram
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLProgram(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._linkCount = 0
+  this._pendingDelete = false
+  this._linkStatus = false
+  this._linkInfoLog = &#x27;not linked&#x27;
+  this._references = []
+  this._refCount = 0
+  this._attributes = []
+  this._uniforms = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLRenderbuffer" id="apidoc.element.gl.wrap.WebGLRenderbuffer">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLRenderbuffer
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLRenderbuffer(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._width = 0
+  this._height = 0
+  this._format = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLRenderingContext" id="apidoc.element.gl.wrap.WebGLRenderingContext">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLRenderingContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLRenderingContext() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLShader" id="apidoc.element.gl.wrap.WebGLShader">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLShader
+        <span class="apidocSignatureSpan">(_, ctx, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLShader(_, ctx, type) {
+  this._ = _
+  this._type = type
+  this._ctx = ctx
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._source = &#x27;&#x27;
+  this._compileStatus = false
+  this._compileInfo = &#x27;&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLShaderPrecisionFormat" id="apidoc.element.gl.wrap.WebGLShaderPrecisionFormat">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLShaderPrecisionFormat
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLShaderPrecisionFormat(_) {
+  this.rangeMin = _.rangeMin
+  this.rangeMax = _.rangeMax
+  this.precision = _.precision
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLTexture" id="apidoc.element.gl.wrap.WebGLTexture">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLTexture
+        <span class="apidocSignatureSpan">(_, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLTexture(_, ctx) {
+  this._ = _
+  this._ctx = ctx
+  this._binding = 0
+  this._pendingDelete = false
+  this._references = []
+  this._refCount = 0
+  this._levelWidth = new Int32Array(32)
+  this._levelHeight = new Int32Array(32)
+  this._format = 0
+  this._type = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gl.wrap.WebGLUniformLocation" id="apidoc.element.gl.wrap.WebGLUniformLocation">
+        function <span class="apidocSignatureSpan">gl.wrap.</span>WebGLUniformLocation
+        <span class="apidocSignatureSpan">(_, program, info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebGLUniformLocation(_, program, info) {
+  this._ = _
+  this._program = program
+  this._linkCount = program._linkCount
+  this._activeInfo = info
+  this._array = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
